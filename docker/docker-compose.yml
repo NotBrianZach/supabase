@@ -79,9 +79,6 @@ services:
   auth:
     container_name: supabase-auth
     image: supabase/gotrue:v2.143.0
-    # only need net_raw for debug
-    cap_add:
-      - NET_RAW
     depends_on:
       db:
         # Disable this if you are using an external Postgres database
